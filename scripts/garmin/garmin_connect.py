@@ -125,6 +125,7 @@ class GarminConnect:
                 pass
 
             response_url = re.sub(r"\\", "", response_url.group(1))
+            print(response_url)
             response = self.cf_req.get(response_url)
             self.req.cookies = self.cf_req.cookies
             if response.status_code == 200:
