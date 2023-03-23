@@ -120,7 +120,7 @@ class GarminConnect:
                 data=data,
             )
             response_url = re.search(r'"(https:[^"]+?ticket=[^"]+)"', response.text)
-
+            print(response_url)
             if not response_url:
                 pass
 
