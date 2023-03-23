@@ -31,10 +31,14 @@ env:
 jobs:
   build:
 
-    runs-on: self-hosted
+    runs-on: ubuntu-20.04
 
     steps:
     - uses: actions/checkout@v3
+    - name: Set up Python 3.8.2
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.8.2"
     # from pdm
     - name: Set Variables
       id: set_variables
